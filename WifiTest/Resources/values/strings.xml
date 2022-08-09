@@ -4,6 +4,6 @@
   <string name="connect_button_text">Connect</string>
   <string name="disconnect_button_text">Disconnect</string>
   
-  <string name="default_ssid">SQYMQLH9</string>
-  <string name="default_passphrase">5scmNH4MrnWz</string>
+  <string name="default_ssid">Enter Wifi Ssid Here</string>
+  <string name="default_passphrase">Enter Password Here</string>
 </resources>

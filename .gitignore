@@ -1,0 +1,4 @@
+bin
+obj
+/WifiTest/*.user
+/.vs/WifiTest/v16/*.suo
