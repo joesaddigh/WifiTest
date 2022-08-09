@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32630.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WifiTest", "WifiTest\WifiTest.csproj", "{DAA9445F-2B62-4EF8-A171-2D9CCC28B340}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CellularWiFiInterfacePlugin.Android", "CellularWiFiInterfacePlugin\CellularWiFiInterfacePlugin.Android.csproj", "{302E07C2-29C4-4EFD-9910-1E7D313A1C65}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DAA9445F-2B62-4EF8-A171-2D9CCC28B340}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAA9445F-2B62-4EF8-A171-2D9CCC28B340}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAA9445F-2B62-4EF8-A171-2D9CCC28B340}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{DAA9445F-2B62-4EF8-A171-2D9CCC28B340}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAA9445F-2B62-4EF8-A171-2D9CCC28B340}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAA9445F-2B62-4EF8-A171-2D9CCC28B340}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{302E07C2-29C4-4EFD-9910-1E7D313A1C65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{302E07C2-29C4-4EFD-9910-1E7D313A1C65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{302E07C2-29C4-4EFD-9910-1E7D313A1C65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{302E07C2-29C4-4EFD-9910-1E7D313A1C65}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FC887E63-5B67-4C22-AA79-7748734CACB0}
+	EndGlobalSection
+EndGlobal

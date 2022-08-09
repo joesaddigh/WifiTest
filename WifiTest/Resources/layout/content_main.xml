@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_main">
+
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="50px"
+        android:layout_y="50px"
+        android:id="@+id/enable"
+    />
+
+    <EditText
+        android:layout_width="300px"
+        android:layout_height="wrap_content"
+        android:id="@+id/ssid"
+        android:layout_x="50px"
+        android:layout_y="150px"
+        android:text="@string/default_ssid"
+        android:inputType="text" 
+    />
+
+    <EditText
+        android:layout_width="300px"
+        android:layout_height="wrap_content"
+        android:id="@+id/passphrase"
+        android:layout_x="50px"
+        android:layout_y="225px"
+        android:password="true"
+        android:text="@string/default_passphrase"
+        android:inputType="textPassword" 
+    />
+
+    <Button
+        android:text="@string/connect_button_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:id="@+id/connect"
+        android:clickable="true"
+        android:duplicateParentState="false"
+        android:accessibilityHeading="false"
+        android:layout_x="50px"
+        android:layout_y="300px"
+    />
+
+    <Button
+        android:text="@string/disconnect_button_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:id="@+id/disconnect"
+        android:clickable="true"
+        android:duplicateParentState="false"
+        android:layout_marginRight="0.0dp" 
+        android:layout_x="175px"
+        android:layout_y="300px"
+    />
+</AbsoluteLayout>
