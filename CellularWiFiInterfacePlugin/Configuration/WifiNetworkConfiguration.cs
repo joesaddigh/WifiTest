@@ -6,20 +6,23 @@ namespace CellWiFiInterfacePlugin.Android
     {
         public string Ssid { get; set; }
         public string Passphrase { get; set; }
+        public int Priority { get; set; }
 
-        public WifiNetworkConfiguration(string ssid, string passphrase)
+        public WifiNetworkConfiguration(string ssid, string passphrase, int priority)
         {
             Ssid = ssid;
             Passphrase = passphrase;
+            Priority = priority;
         }
 
         public WifiConfiguration CreateWifiConfiguration()
         {
             return new WifiConfiguration()
             {
-                Ssid = FormatWifiConfigurationValue(Ssid),
-                PreSharedKey = FormatWifiConfigurationValue(Passphrase),
-                StatusField = WifiStatus.Enabled
+                Ssid = Ssid
+                ,PreSharedKey = FormatWifiConfigurationValue(Passphrase)
+                ,StatusField = WifiStatus.Enabled
+                ,Priority = Priority
             };
         }
 

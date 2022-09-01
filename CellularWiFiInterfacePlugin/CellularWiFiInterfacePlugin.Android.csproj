@@ -42,6 +42,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Wifi2.cs" />
     <Compile Include="Wifi.cs" />
     <Compile Include="Configuration\CellularWifiNetworkConfiguration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

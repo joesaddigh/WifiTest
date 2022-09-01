@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_x="50px"
-        android:layout_y="50px"
+        android:layout_y="25px"
         android:id="@+id/enable"
     />
 
@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/ssid"
         android:layout_x="50px"
-        android:layout_y="150px"
+        android:layout_y="125px"
         android:text="@string/default_ssid"
         android:inputType="text" 
     />
@@ -30,10 +30,20 @@
         android:layout_height="wrap_content"
         android:id="@+id/passphrase"
         android:layout_x="50px"
-        android:layout_y="225px"
+        android:layout_y="190px"
         android:password="true"
         android:text="@string/default_passphrase"
         android:inputType="textPassword" 
+    />
+
+    <EditText
+        android:layout_width="300px"
+        android:layout_height="wrap_content"
+        android:id="@+id/priority"
+        android:layout_x="50px"
+        android:layout_y="255px"
+        android:text="@string/default_priority"
+        android:inputType="number"
     />
 
     <Button
@@ -47,7 +57,7 @@
         android:duplicateParentState="false"
         android:accessibilityHeading="false"
         android:layout_x="50px"
-        android:layout_y="300px"
+        android:layout_y="310px"
     />
 
     <Button
@@ -61,6 +71,6 @@
         android:duplicateParentState="false"
         android:layout_marginRight="0.0dp" 
         android:layout_x="175px"
-        android:layout_y="300px"
+        android:layout_y="310px"
     />
 </AbsoluteLayout>

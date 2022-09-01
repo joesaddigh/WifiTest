@@ -20,6 +20,7 @@ namespace WifiTest
         };
 
         private readonly Wifi wifi = new Wifi();
+        private readonly Wifi2 wifi2 = new Wifi2();
 
         enum AddRemove { add, remove };
 
@@ -93,9 +94,20 @@ namespace WifiTest
         {
             var ssidText = FindViewById<Android.Widget.EditText>(Resource.Id.ssid).Text;
             var passphraseText = FindViewById<Android.Widget.EditText>(Resource.Id.passphrase).Text;
+            var priorityText = FindViewById<Android.Widget.EditText>(Resource.Id.priority).Text;
+            int.TryParse(priorityText, out int priority);
 
-            wifi.AddNetwork(new WifiNetworkConfiguration(ssidText, passphraseText));
-            wifi.Connect();
+            var doWifi2Code = false;
+
+            if (doWifi2Code)
+            {
+                wifi2.Connect(new WifiNetworkConfiguration(ssidText, passphraseText, priority));
+            }
+            else
+            {
+                wifi.AddNetwork(new WifiNetworkConfiguration(ssidText, passphraseText, priority));
+                wifi.Connect();
+            }
         }
 
         private void DisonnectOnClick(object sender, EventArgs eventArgs)

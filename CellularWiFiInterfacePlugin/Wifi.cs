@@ -53,8 +53,10 @@ namespace CellWiFiInterfacePlugin.Android
             // Just in case our network is already added, remove it first.
             RemoveConfiguredNetwork(wifiNetworkConfiguration);
 
-            // Now add it and return the success state.
-            return AddConfiguredNetwork(wifiNetworkConfiguration);
+            // Now add it.
+            var networkAdded = AddConfiguredNetwork(wifiNetworkConfiguration);
+
+            return networkAdded;
         }
 
         public bool IsWifiEnabled => wifiManager.IsWifiEnabled;
@@ -64,7 +66,7 @@ namespace CellWiFiInterfacePlugin.Android
             return wifiManager.SetWifiEnabled(enabled);
         }
 
-        private void RemoveConfiguredNetwork(WifiNetworkConfiguration primaryWifiNetworkConfiguration)
+        private void RemoveConfiguredNetwork(WifiNetworkConfiguration wifiConfiguration)
         {
             if (wifiManager.ConfiguredNetworks == null || wifiManager.ConfiguredNetworks.Count == 0)
             {
@@ -73,25 +75,25 @@ namespace CellWiFiInterfacePlugin.Android
 
             foreach (var configuredNetwork in wifiManager.ConfiguredNetworks)
             {
-                if (configuredNetwork.Ssid == WifiNetworkConfiguration.FormatWifiConfigurationValue(primaryWifiNetworkConfiguration.Ssid))
+                if (configuredNetwork.Ssid == WifiNetworkConfiguration.FormatWifiConfigurationValue(wifiConfiguration.Ssid))
                 {
-                    Log($"Removing Wifi Network: {primaryWifiNetworkConfiguration.Ssid}.");
+                    Log($"Removing Wifi Network: {wifiConfiguration.Ssid}.");
                     wifiManager.RemoveNetwork(configuredNetwork.NetworkId);
                 }
             }
         }
 
-        private bool AddConfiguredNetwork(WifiNetworkConfiguration primaryWifiNetworkConfiguration)
+        private bool AddConfiguredNetwork(WifiNetworkConfiguration wifiConfiguration)
         {
-            configuredNetworkId = wifiManager.AddNetwork(primaryWifiNetworkConfiguration.CreateWifiConfiguration());
+            configuredNetworkId = wifiManager.AddNetwork(wifiConfiguration.CreateWifiConfiguration());
 
             if (configuredNetworkId < 0)
             {
-                Log($"Failed to add primary network: {primaryWifiNetworkConfiguration.Ssid}. Returned network id is: {configuredNetworkId}.");
+                Log($"Failed to add network: {wifiConfiguration.Ssid}. Returned network id is: {configuredNetworkId}.");
             }
             else
             {
-                Log($"Successfully added configured network: {primaryWifiNetworkConfiguration.Ssid}. Returned network id is: {configuredNetworkId}.");
+                Log($"Successfully added configured network: {wifiConfiguration.Ssid}. Returned network id is: {configuredNetworkId}.");
             }
 
             return true;

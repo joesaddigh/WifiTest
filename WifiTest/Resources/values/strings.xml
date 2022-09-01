@@ -3,7 +3,8 @@
   <string name="action_settings">Settings</string>
   <string name="connect_button_text">Connect</string>
   <string name="disconnect_button_text">Disconnect</string>
-  
+
   <string name="default_ssid">Enter Wifi Ssid Here</string>
   <string name="default_passphrase">Enter Password Here</string>
+  <string name="default_priority">1000</string>
 </resources>
